@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:400,600,700");
+
+@font-face {
+  font-family: "Blacksword";
+  src: url("Blacksword.otf");
+}
+
+$primary: #ab822c;
+$primary-dark: #604713;
+$light-grey: #e0dfdf;
+$white: #fff;
+$active: #3171e8;
+
+// Utility Styling
+@mixin width($bg-color) {
+  width: 10%;
+  height: 2px;
+  margin: auto;
+  background: $bg-color;
+}
+
+// General Styling
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  position: relative;
+}
+
+header {
+  nav {
+    transition: 0.6s;
+  }
+
+  .navbar {
+    .navbar-nav {
+      .nav-link {
+        color: $primary !important;
+        font-weight: 400;
+
+        &.active {
+          color: $active !important;
+        }
+      }
+    }
+  }
+}
+
+#home,
+#business {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .jumbotron {
+    padding-top: 6rem;
+  }
+}
+
+.jumbotron {
+  background: none;
+  margin-bottom: 0;
+  h2 {
+    font-family: "Blacksword";
+    color: $primary;
+  }
+  .width {
+    @include width($light-grey);
+  }
+  a.button {
+    color: #fff;
+  }
+  .button {
+    background: linear-gradient(to right, $primary, $primary-dark);
+    padding: 20px 50px;
+    border: 2px solid $primary;
+    border-radius: 40px;
+    display: inline-block;
+    margin: 20px 0;
+
+    &:hover {
+      text-decoration: none;
+      background: transparent;
+      color: $primary;
+      border: 2px solid $primary;
+      transition: 0.6s;
+    }
+
+    i {
+      padding-left: 20px;
+    }
+  }
+}
+
+.scroll-navbar {
+  background: $white;
+  padding: 20px;
+  box-shadow: 1px 11px 68px -20px rgba(171, 131, 44, 0.466);
+}
+
+#scroll-to-top {
+  width: 74px;
+  height: 74px;
+  line-height: 74px;
+  background: $primary;
+  cursor: pointer;
+  text-align: center;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 9;
+  border-radius: 50%;
+  box-shadow: 1px 3px 14px 6px rgba(171, 131, 44, 0.466);
+  display: none;
+  i {
+    color: #fff;
+    font-size: 24px;
+  }
+}
+
+#gallery {
+  [class^="col-md-6"] {
+    margin-bottom: 1.6rem;
+  }
+  .img-container {
+    position: relative;
+    .img-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.67);
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      color: $white;
+      transition: 1s;
+
+      p {
+        text-transform: uppercase;
+      }
+
+      .width {
+        @include width($primary);
+      }
+    }
+
+    &:hover .img-overlay {
+      opacity: 1;
+    }
+  }
+}
+
