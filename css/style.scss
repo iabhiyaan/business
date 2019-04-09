@@ -54,6 +54,10 @@ header {
   height: 100vh;
   display: flex;
   align-items: center;
+  background: linear-gradient(rgba(248, 248, 248, 0.911),rgba(236, 236, 236, 0.904)),url('../img/bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 30px;
 
   .jumbotron {
     padding-top: 6rem;
