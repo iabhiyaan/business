@@ -7,7 +7,7 @@
 
 $primary: #ab822c;
 $primary-dark: #604713;
-$light-grey: #e0dfdf;
+$light-grey: #949494ec;
 $white: #fff;
 $active: #3171e8;
 
@@ -28,6 +28,7 @@ html {
 body {
   font-family: "Muli", sans-serif;
   position: relative;
+  padding-top: 120px;
 }
 
 header {
@@ -49,53 +50,68 @@ header {
   }
 }
 
-#home,
-#business {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(rgba(248, 248, 248, 0.911),rgba(236, 236, 236, 0.904)),url('../img/bg.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  margin-bottom: 30px;
+#loan {
+  .loan--content {
+    background: linear-gradient(rgba(248, 248, 248, 0.911), rgba(236, 236, 236, 0.904)), url("../img/bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    padding-left: 15px;
+    padding-right: 15px;
+    h2 {
+      font-family: "Blacksword";
+      color: $primary;
+    }
 
-  .jumbotron {
-    padding-top: 6rem;
+    .width {
+      @include width($light-grey);
+    }
+
+    p.lead {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+    a.button {
+      color: #fff;
+    }
+
+    .button {
+      background: linear-gradient(to right, $primary, $primary-dark);
+      padding: 15px 40px;
+      border: 2px solid $primary;
+      border-radius: 40px;
+      display: inline-block;
+      margin: 25px 0;
+
+      &:hover {
+        text-decoration: none;
+        background: transparent;
+        color: $primary;
+        border: 2px solid $primary;
+        transition: 0.6s;
+      }
+
+      i {
+        padding-left: 20px;
+      }
+    }
   }
 }
 
-.jumbotron {
-  background: none;
-  margin-bottom: 0;
-  h2 {
-    font-family: "Blacksword";
-    color: $primary;
-  }
-  .width {
-    @include width($light-grey);
-  }
-  a.button {
-    color: #fff;
-  }
-  .button {
-    background: linear-gradient(to right, $primary, $primary-dark);
-    padding: 20px 50px;
-    border: 2px solid $primary;
-    border-radius: 40px;
-    display: inline-block;
-    margin: 20px 0;
-
-    &:hover {
-      text-decoration: none;
-      background: transparent;
-      color: $primary;
-      border: 2px solid $primary;
-      transition: 0.6s;
+#home {
+  .loan--content {
+    img {
+      padding: .76rem;
     }
-
-    i {
-      padding-left: 20px;
+    .button {
+      margin: 17px 0;
     }
+  }
+}
+
+#business {
+  .loan--content {
+    padding-bottom: 10px;
   }
 }
 
@@ -125,35 +141,30 @@ header {
   }
 }
 
-#gallery {
-  [class^="col-md-6"] {
-    margin-bottom: 1.6rem;
+.img-container {
+  position: relative;
+  margin-bottom: 1.6rem;
+  .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.67);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    color: $white;
+    transition: 1s;
+
+    p {
+      text-transform: uppercase;
+    }
+
+    .width {
+      @include width($primary);
+    }
   }
-  .img-container {
-    position: relative;
-    .img-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.67);
-      height: 100%;
-      width: 100%;
-      opacity: 0;
-      color: $white;
-      transition: 1s;
 
-      p {
-        text-transform: uppercase;
-      }
-
-      .width {
-        @include width($primary);
-      }
-    }
-
-    &:hover .img-overlay {
-      opacity: 1;
-    }
+  &:hover .img-overlay {
+    opacity: 1;
   }
 }
-

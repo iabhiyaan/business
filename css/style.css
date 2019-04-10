@@ -11,6 +11,7 @@ html {
 body {
   font-family: "Muli", sans-serif;
   position: relative;
+  padding-top: 120px;
 }
 
 header nav {
@@ -27,59 +28,47 @@ header .navbar .navbar-nav .nav-link.active {
   color: #3171e8 !important;
 }
 
-#home,
-#business {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+#loan .loan--content {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(248, 248, 248, 0.911)), to(rgba(236, 236, 236, 0.904))), url("../img/bg.jpg");
   background: linear-gradient(rgba(248, 248, 248, 0.911), rgba(236, 236, 236, 0.904)), url("../img/bg.jpg");
   background-size: cover;
   background-attachment: fixed;
-  margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-#home .jumbotron,
-#business .jumbotron {
-  padding-top: 6rem;
-}
-
-.jumbotron {
-  background: none;
-  margin-bottom: 0;
-}
-
-.jumbotron h2 {
+#loan .loan--content h2 {
   font-family: "Blacksword";
   color: #ab822c;
 }
 
-.jumbotron .width {
+#loan .loan--content .width {
   width: 10%;
   height: 2px;
   margin: auto;
-  background: #e0dfdf;
+  background: #949494ec;
 }
 
-.jumbotron a.button {
+#loan .loan--content p.lead {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+#loan .loan--content a.button {
   color: #fff;
 }
 
-.jumbotron .button {
+#loan .loan--content .button {
   background: -webkit-gradient(linear, left top, right top, from(#ab822c), to(#604713));
   background: linear-gradient(to right, #ab822c, #604713);
-  padding: 20px 50px;
+  padding: 15px 40px;
   border: 2px solid #ab822c;
   border-radius: 40px;
   display: inline-block;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
-.jumbotron .button:hover {
+#loan .loan--content .button:hover {
   text-decoration: none;
   background: transparent;
   color: #ab822c;
@@ -88,8 +77,20 @@ header .navbar .navbar-nav .nav-link.active {
   transition: 0.6s;
 }
 
-.jumbotron .button i {
+#loan .loan--content .button i {
   padding-left: 20px;
+}
+
+#home .loan--content img {
+  padding: .76rem;
+}
+
+#home .loan--content .button {
+  margin: 17px 0;
+}
+
+#business .loan--content {
+  padding-bottom: 10px;
 }
 
 .scroll-navbar {
@@ -121,15 +122,12 @@ header .navbar .navbar-nav .nav-link.active {
   font-size: 24px;
 }
 
-#gallery [class^="col-md-6"] {
+.img-container {
+  position: relative;
   margin-bottom: 1.6rem;
 }
 
-#gallery .img-container {
-  position: relative;
-}
-
-#gallery .img-container .img-overlay {
+.img-container .img-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -142,18 +140,18 @@ header .navbar .navbar-nav .nav-link.active {
   transition: 1s;
 }
 
-#gallery .img-container .img-overlay p {
+.img-container .img-overlay p {
   text-transform: uppercase;
 }
 
-#gallery .img-container .img-overlay .width {
+.img-container .img-overlay .width {
   width: 10%;
   height: 2px;
   margin: auto;
   background: #ab822c;
 }
 
-#gallery .img-container:hover .img-overlay {
+.img-container:hover .img-overlay {
   opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
