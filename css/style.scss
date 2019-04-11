@@ -34,6 +34,7 @@ body {
 header {
   nav {
     transition: 0.6s;
+    background: $white;
   }
 
   .navbar {
@@ -98,7 +99,7 @@ header {
   }
 }
 
-#home {
+#hero {
   .loan--content {
     img {
       padding: .76rem;

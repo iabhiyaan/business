@@ -17,6 +17,7 @@ body {
 header nav {
   -webkit-transition: 0.6s;
   transition: 0.6s;
+  background: #fff;
 }
 
 header .navbar .navbar-nav .nav-link {
@@ -81,11 +82,11 @@ header .navbar .navbar-nav .nav-link.active {
   padding-left: 20px;
 }
 
-#home .loan--content img {
+#hero .loan--content img {
   padding: .76rem;
 }
 
-#home .loan--content .button {
+#hero .loan--content .button {
   margin: 17px 0;
 }
 
